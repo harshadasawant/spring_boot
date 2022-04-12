@@ -1,7 +1,9 @@
 package com.example.demo;
 
+import com.example.demo.bean.Customer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 //@SpringBootApplication = @Configuration + @ComponentScan + @EnableAutoConfiguration
 //The @SpringBootApplication annotation is a combination of following three Spring annotations and provides the functionality of all three with just one line of code.
@@ -18,7 +20,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		ConfigurableApplicationContext context = SpringApplication.run(DemoApplication.class, args);
+		Customer cust = context.getBean(Customer.class);
+		cust.disaply();
 		System.out.println("Hello world!");
 
 
