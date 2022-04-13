@@ -18,4 +18,12 @@ public class BookService {
         repository.findAll().forEach(x -> booklist.add(x));
         return booklist;
     }
+
+    public Book getBook(long bookid){
+        List<Book> booklist = new ArrayList<Book>();
+        Book book1 = new Book();
+        repository.findById(bookid).get();
+        return repository.findById(bookid).get();
+    }
+
 }
