@@ -26,4 +26,9 @@ public class BookService {
         return repository.findById(bookid).get();
     }
 
+    public Book addBook(Book book){
+        Book b = repository.save(book);
+        return b;
+    }
+
 }
