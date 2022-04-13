@@ -20,13 +20,15 @@ public class BookService {
     }
 
     public Book getBook(long bookid){
-        List<Book> booklist = new ArrayList<Book>();
-        Book book1 = new Book();
-        repository.findById(bookid).get();
         return repository.findById(bookid).get();
     }
 
     public Book addBook(Book book){
+        Book b = repository.save(book);
+        return b;
+    }
+
+    public Book updateBook(Book book){
         Book b = repository.save(book);
         return b;
     }

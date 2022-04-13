@@ -29,4 +29,9 @@ public class BookController {
     Book addBook(@RequestBody Book book){
       return bookService.addBook(book);
     }
+
+    @PutMapping("/updatebook")
+    Book updateBook(@RequestBody Book book){
+        return bookService.updateBook(book);
+    }
 }
