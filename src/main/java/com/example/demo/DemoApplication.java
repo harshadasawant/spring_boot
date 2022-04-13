@@ -2,6 +2,7 @@ package com.example.demo;
 
 import com.example.demo.bean.Book;
 import com.example.demo.bean.Customer;
+import com.example.demo.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
