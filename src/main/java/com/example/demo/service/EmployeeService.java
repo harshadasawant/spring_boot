@@ -5,10 +5,12 @@ import com.example.demo.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Transactional
 public class EmployeeService {
 
     @Autowired
@@ -16,6 +18,11 @@ public class EmployeeService {
 
     public Employee addEmployee(Employee employee){
        Employee emp = (Employee) employeeRepository.save(employee);
+        System.out.println(10/0);
+       Employee emp1 = new Employee();
+       emp1.setName("Teju");
+       emp1.setAge(25);
+       employeeRepository.save(emp1);
        return emp;
     }
 
