@@ -31,26 +31,26 @@ public class DemoApplication  implements CommandLineRunner {
 		cust.disaply();
 		System.out.println("Hello world!");
 
-
 		}
+
 
 
 	@Override
 	public void run(String... args) throws Exception {
 
 
-		repository.save(new Book("Java"));
-		repository.save(new Book("Node"));
-		repository.save(new Book("Python"));
-
-		System.out.println("\nfindAll()");
-		repository.findAll().forEach(x -> System.out.println(x));
-
-		System.out.println("\nfindById(1L)");
-		repository.findById(1l).ifPresent(x -> System.out.println(x));
-
-		System.out.println("\nfindByName('Node')");
-		repository.findByName("Node").forEach(x -> System.out.println(x));
+//		repository.save(new Book("Java"));
+//		repository.save(new Book("Node"));
+//		repository.save(new Book("Python"));
+//
+//		System.out.println("\nfindAll()");
+//		repository.findAll().forEach(x -> System.out.println(x));
+//
+//		System.out.println("\nfindById(1L)");
+//		repository.findById(1l).ifPresent(x -> System.out.println(x));
+//
+//		System.out.println("\nfindByName('Node')");
+//		repository.findByName("Node").forEach(x -> System.out.println(x));
 
 	}
 }
