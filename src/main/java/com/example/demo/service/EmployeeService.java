@@ -18,7 +18,7 @@ public class EmployeeService {
 
     public Employee addEmployee(Employee employee){
        Employee emp = (Employee) employeeRepository.save(employee);
-        System.out.println(10/0);
+//        System.out.println(10/0);
        Employee emp1 = new Employee();
        emp1.setName("Teju");
        emp1.setAge(25);
